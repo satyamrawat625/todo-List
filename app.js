@@ -74,7 +74,7 @@ app.post("/",function (req,res) {
 
     if(listName=== "Today"){//ie if we r in default list
         item.save()
-        setInterval(1000);//time taken to save in mongodb ,otherwise new item wont be instantly rendered
+        setTimeout(function(){ },1000);//time taken to save in mongodb ,otherwise new item wont be instantly rendered
         res.redirect("/")
     }
     else{
